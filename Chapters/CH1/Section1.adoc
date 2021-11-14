@@ -19,10 +19,9 @@ ifdef::env-github[]
 endif::[]
 :imagesdir: ../images/
 
-==  Introducing Container Technology
 
-=== Overview of Container Technology
+=== <SECTION TITLE>
 
-The goal of this section is to understand differences between container applications and traditional application deployment.
+Section Info Here
 
-==== Containerized Applications
+==== <Section_Sub_Intro_Here>
