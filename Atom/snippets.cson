@@ -1,0 +1,199 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.source.asciidoc':
+
+  'NOTE box':
+    'prefix': 'note'
+    'body': """
+.Note Header
+[NOTE]
+======
+
+======
+"""
+
+
+  'WARNING box':
+    'prefix': 'warning'
+    'body': """
+.Warning Header
+[WARNING]
+======
+
+======
+"""
+
+  'TIP box':
+    'prefix': 'tip'
+    'body': """
+.TIP Header
+[TIP]
+======
+
+======
+"""
+
+  'CAUTION box':
+    'prefix': 'caution'
+    'body': """
+.Caution Header
+[CAUTION]
+======
+
+======
+"""
+
+  'IMPORTANT box':
+    'prefix': 'important'
+    'body': """
+.Important Header
+[IMPORTANT]
+======
+
+======
+"""
+
+  'Table':
+    'prefix': 'table'
+    'body': """
+.Classroom Machines
+[cols="4a,4a,4a",options=header]
+|===
+|Machine name
+|IP addresses
+|Role
+
+|===
+"""
+
+  'IMAGE Template':
+    'prefix': 'image'
+    'body': """
+image::AnsibleTower-Classroom-Architecture.png[title="DO447 Classroom Layout", align="center"]
+"""
+
+
+  'SOURCE Block':
+    'prefix': 'source'
+    'body': """
+.Source Description
+[source,bash]
+----
+
+----
+"""
+
+  'SOURCE Block for YAML':
+    'prefix': 'yml_source'
+    'body': """
+.Source Description
+[source,yaml]
+----
+
+----
+"""
+
+  'RHV Abbreviation':
+    'prefix': 'RHV'
+    'body': """
+Red Hat Virtualization
+"""
+
+  'SOURCE Block for GLS':
+    'prefix': 'gls_source'
+    'body': """
+[subs=+quotes]
+----
+
+----
+"""
+
+  'References for GLS':
+    'prefix': 'gls_ref'
+    'body': """
+[role="References"]
+[NOTE]
+====
+References Go HERE
+====
+"""
+
+
+  'Note for GLS':
+    'prefix': 'gls_note'
+    'body': """
+[NOTE]
+====
+Notes Go HERE
+====
+"""
+
+  'Important for GLS':
+    'prefix': 'gls_important'
+    'body': """
+[IMPORTANT]
+====
+IMPORTANT Text Goes HERE
+====
+"""
+
+  'Warning for GLS':
+    'prefix': 'gls_warn'
+    'body': """
+[WARNING]
+====
+WARNING Text Goes HERE
+====
+"""
+
+
+  'Table for GLS':
+    'prefix': 'gls_table'
+    'body': """
+.TABLE NAME
+[cols="1.0,1.0,1.0", options="header"]
+|===
+|  Machine name               | IP addresses   | Role
+| bastion.lab.example.com     | 172.25.250.254 | Router link VMs to central servers
+|===
+"""
+
+
+
+
+
+
+  'Gitlab and Github Readme callouts':
+    'prefix': 'git_doc'
+    'body': """
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+"""
