@@ -14,7 +14,7 @@ Travis Michette <tmichett@redhat.com>
 :pdf-page-size: LETTER
 :icons: font
 ifdef::backend-pdf[]
-:title-page-background-image: image:images/Training_Cover.png[pdfwidth=8.0in,align=center]
+:title-page-background-image: image:Training_Cover.png[pdfwidth=8.0in,position=top left]
 :pygments-style: tango
 :source-highlighter: pygments
 endif::[]
