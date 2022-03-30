@@ -1,0 +1,67 @@
+:pygments-style: tango
+:source-highlighter: pygments
+:toc:
+:toclevels: 7
+:sectnums:
+:sectnumlevels: 6
+:numbered:
+:chapter-label:
+:icons: font
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+:imagesdir: ../images/
+
+= ASCIIDoc Usage and Setup Instructions
+
+Initial template files for creating the ASCIIDoc books and HTML rendering for Github/Gitlab
+
+== Setting up a System for AsciiDoctor and AsciiDoctor-PDF
+
+It is best to have ASCIIDoc and ASCIIDoctor installed. In order to generate the PDF book, the *asciidoctor-pdf* GEM file is used. You will want the latest version of GEMs and may require a newer version of Ruby.
+
+.Installing GEMs
+[source,bash]
+----
+gem update
+gem install rghost
+gem install asciidoctor-pdf
+gem install coderay
+gem install rouge
+gem install pygments.rb
+gem update
+----
+
+.Documentation Available Here
+[NOTE]
+======
+https://asciidoctor.org/docs/asciidoctor-pdf/
+======
+
+== Fonts, Images, and PDF Style Templates
+
+There is a folder called *fonts* and a folder called *themes* containing the fonts/themes used for building the PDF documentation. In order to make things easier for building of PDF documents, the theme file specifies a fully-qualified (absolute path). Currently the path I use for MacOS and Linux is */opt/asciidoc* with a *fonts* directory and a *theme* directory there. It is also easy to move the themes directory and store it with the project, however, the location of system fonts in the theme file is a little harder to have as a relative path.
+
+* *tm-gls-redhat-theme.yml* - Theme used to create Workshop guides with Red Hat branding and setup the ToC, headers, footers, with the correct fonts and formatting.
+
+=== Building the PDF Books
+
+The easiest way to build the PDF books is from the working directory of the book file. I you follow the template, the <Name> will always be *Main* as that is how the template file is setup. This can be changed to anything that is desired and might be the resulting name of the book you are wanting to build. The *asciidoctor-pdf* process will take *Main.adoc* and build all the chapters and the resulting output of the command would be a *Main.pdf* which is the built book with the template.
+
+.Building a Book from Template
+[source,bash]
+----
+asciidoctor-pdf -a pdf-theme=themes/tm-gls-redhat-theme.yml <Name>.adoc
+----
+
+
+== Editors
+
+There are two editors that I typically use for Asciidoc, YAML (Ansible playbooks/OCP CRDs), and other items. The two main editors are Atom and VSCode/VSCodmium. I prefer the Atom editor when utilizing Asciidoc because of the many available plugins, the integration with Github/Gitlab/Git, and the customizable snippets. The VSCode/VSCodmium editor has all the same features, but they work slightly differently and don't find them quite as easy to use and straightforward for the Asciidoc book building, previews, and PDF generation.
