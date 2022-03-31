@@ -1,0 +1,137 @@
+= {subject}
+:subject: AsciiDoc - Introduction
+:description:  An Introduction to AsciiDoc
+Travis Michette <tmichett@redhat.com>
+:doctype: book
+:customer:  Red Hat Consulting
+:listing-caption: Listing
+:toc:
+:toclevels: 6
+:sectnums:
+:sectnumlevels: 5
+:numbered:
+:chapter-label:
+:pdf-page-size: LETTER
+:icons: font
+ifdef::backend-pdf[]
+:title-page-background-image: image:EngagementJournalCoverPageLogoNew.jpg[pdfwidth=8.0in,align=center]
+:pygments-style: tango
+:source-highlighter: pygments
+endif::[]
+:revnumber: 0.0.1
+:imagesdir: images/
+
+
+
+== Introduction to AsciiDoc
+
+=== Installing AsciiDoc
+
+.*Required Packages for AsciiDoc*
+[cols=2,cols="2",options=header]
+|===
+|Package Name
+|Repository
+
+| *asciidoc*
+| Red Hat Enterprise Linux Server Optional
+
+| *asciidoc-doc*
+| Red Hat Enterprise Linux Server Optional
+
+|===
+
+.*AsciiDoc Package Dependencies*
+[cols=2,cols="2",options=header]
+|===
+|Package Name
+|Repository
+
+| boost-regex
+| Red Hat Enterprise Linux Server
+
+| ctags
+| Red Hat Enterprise Linux Server
+
+| docbook-dtds
+| Red Hat Enterprise Linux Server
+
+| docbook-style-xsl
+| Red Hat Enterprise Linux Server
+
+| graphviz
+| Red Hat Enterprise Linux Server
+
+| libXaw
+| Red Hat Enterprise Linux Server
+
+| sgml-common
+| Red Hat Enterprise Linux Server
+
+| source-highlight
+| Red Hat Enterprise Linux Server Optional
+
+|===
+
+NOTE: For this exercise, the items have been downloaded and provided as part of the local repositories and local environment. Other systems will install software from the Internet and receive packages from connected repositories.
+
+
+.Installing AsciiDoc
+[source,bash]
+----
+[root@workstation~]# yum localinstall http://content.example.com/asciidoc/asciidoc-8.6.8-5.el7.noarch.rpm http://content.example.com/asciidoc/source-highlight-3.1.6-6.el7.x86_64.rpm http://content.example.com/asciidoc/asciidoc-doc-8.6.8-5.el7.noarch.rpm
+
+----
+
+== The Atom Editor
+
+
+Atom is a text editor that's modern, approachable, yet hackable to the core—a tool you can customize to do anything but also use productively without ever touching a config file.
+
+The Atom Editor is an Open-Source editor for AsciiDoc and other languages. It provides Syntax highlighting, live previews, and other functionality. Atom Editor is available on Linux, Mac OS, and Windows. It can be downloaded from https://atom.io.
+
+*Features*
+
+* Cross-platform editing
+* File system browser
+* Built-in package manager
+* Multiple panes
+* Smart autocompletion
+* Find and replace
+
+=== Installing the Atom Editor
+
+.*Atom Package Dependencies*
+[cols=2,cols="2",options=header]
+|===
+|Package Name
+|Repository
+
+| libXScrnSaver
+| Red Hat Enterprise Linux Server
+
+| m4
+| Red Hat Enterprise Linux Server
+
+| patch
+| Red Hat Enterprise Linux Server
+
+| redhat-lsb-core
+| Red Hat Enterprise Linux Server
+
+| redhat-lsb-submod-security
+| Red Hat Enterprise Linux Server
+
+| spax
+| Red Hat Enterprise Linux Server
+
+
+|===
+
+
+.Installing AsciiDoc
+[source,bash]
+----
+[root@workstation~]# yum localinstall http://content.example.com/asciidoc/atom.x86_64.rpm
+
+----
