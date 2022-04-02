@@ -1,0 +1,10 @@
+---
+- name: Copy Ansible Snippets to User's Directory
+  hosts: localhost
+  tasks:
+
+    - name: Copy snippets.cson to User's HOME Directory
+      blockinfile:
+        block: "{{ lookup('file', './snippets.cson') }}"
+        path: ~/.atom/snippets.cson
+        backup: yes
