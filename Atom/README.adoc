@@ -1,0 +1,32 @@
+= Atom Installation Instructions and Snippets
+
+
+== Installing Atom as a SNAP
+
+Currently for RHEL9/CentOS Stream 9 there is no *lsb-core-noarch* package available.
+
+----
+Error: 
+ Problem: conflicting requests
+  - nothing provides lsb-core-noarch needed by atom-1.60.0-0.1.x86_64
+----
+
+.Atom Installation on RHEL9 / CentOS Stream 9
+----
+[root@cs9 ~]# snap install atom --classic
+atom 1.57.0 from Snapcrafters installed
+----
+
+== Atom Snippets
+
+Can be used as *code* snippets to extend syntax based on pre-populated templates. These files can be added manually via the Atom Editor or in an automated fashion by copying them to the *snippets.cson* file in the correct location.
+
+== Linux Atom Snippets Location
+
+$HOME/.atom/snippets.cson
+
+.Example Snippets Path
+----
+/home/travis/.atom/snippets.cson
+----
+
