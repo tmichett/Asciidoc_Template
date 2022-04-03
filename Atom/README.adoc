@@ -23,7 +23,7 @@ Can be used as *code* snippets to extend syntax based on pre-populated templates
 
 == Linux Atom Snippets Location
 
-$HOME/.atom/snippets.cson
+*$HOME/.atom/snippets.cson*
 
 .Example Snippets Path
 ----

@@ -1,0 +1,7 @@
+= References
+
+== Snippet Generator
+
+* *https://snippet-generator.app/* - Generates Snippets for Atom, VSCode, and Sublime Text
+
+
