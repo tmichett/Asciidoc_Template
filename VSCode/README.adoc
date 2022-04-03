@@ -1,0 +1,17 @@
+= VSCode Installation Instructions and Snippets
+
+
+
+== VSCode Snippets
+
+Can be used as *code* snippets to extend syntax based on pre-populated templates. These files can be added manually via the VS Code Editor or in an automated fashion by copying them to the *$HOME/.config/Code/User/snippets*.
+
+== Linux Atom Snippets Location
+
+*$HOME/.config/Code/User/snippets*
+
+.Example Snippets Path
+----
+/home/travis/.config/Code/User/snippets
+----
+
