@@ -1,0 +1,8 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-playbook.json": [
+            "file:///home/travis/Github/Asciidoc_Template/Atom/deploy_atom_snippets.yaml",
+            "file:///home/travis/Github/Asciidoc_Template/Atom/deploy_atom_snippets.yml"
+        ]
+    }
+}
