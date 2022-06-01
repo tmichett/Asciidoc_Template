@@ -19,3 +19,10 @@ endif::[]
 = ASCIIDoc Template
 
 Initial template files for creating the ASCIIDoc books and HTML rendering for Github/Gitlab
+
+
+.Creating PDF with Theme
+[source,bash]
+----
+asciidoctor-pdf  -a pdf-theme=themes/tm-gls-redhat-theme.yml Main.adoc
+----
