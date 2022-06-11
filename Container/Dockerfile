@@ -11,11 +11,12 @@ ENV BOOK="/tmp/coursebook"
 
 RUN dnf -y install  ruby python3 asciidoc \
   && dnf clean all \
-  && gem install asciidoctor asciidoctor-pdf rouge  pygments.rb coderay \
+  && gem install asciidoctor rouge  pygments.rb coderay \
+  && gem install asciidoctor-pdf -v 2.1.0 \
   && mkdir -p ${BOOK}
 
 VOLUME ${BOOK}
 
 WORKDIR ${BOOK}/guides
 
-ENTRYPOINT [ "/usr/bin/flamel" ]
+ENTRYPOINT [ "/usr/local/share/gems/gems/asciidoctor-pdf-2.1.0/bin/asciidoctor-pdf" ]
