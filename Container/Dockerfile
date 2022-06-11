@@ -7,7 +7,9 @@ MAINTAINER Travis Michette <tmichett@redhat.com>
 #ARG ASCIIDOCTOR=
 #ARG ASCIIDOCTOR="-2.0.10"
 
-RUN dnf -y install  rubygem python3 asciidoc \
+ENV BOOK="/tmp/coursebook"
+
+RUN dnf -y install  ruby python3 asciidoc \
   && dnf clean all \
   && gem install asciidoctor asciidoctor-pdf rouge  pygments.rb coderay \
   && mkdir -p ${BOOK}
