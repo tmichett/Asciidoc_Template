@@ -20,6 +20,7 @@ ADD asciidoc /opt
 
 VOLUME ${BOOK}
 
-WORKDIR ${BOOK}/guides
-
-CMD [ "/usr/local/share/gems/gems/asciidoctor-pdf-2.1.0/bin/asciidoctor-pdf" ]
+WORKDIR ${BOOK}
+ 
+#ENTRYPOINT [ "/usr/local/share/gems/gems/asciidoctor-pdf-2.1.0/bin/asciidoctor-pdf", "-a pdf-theme=/opt/asciidoc/themes/tm-gls-redhat-theme.yml"]
+ENTRYPOINT [ "/usr/local/share/gems/gems/asciidoctor-pdf-2.1.0/bin/asciidoctor-pdf"]
