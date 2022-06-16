@@ -1,9 +1,14 @@
-#!/usr/bin/env python3
+#!/usr/bin/bash
 #
 # Travis Michette <tmichett@redhat.com>
 
-container = "quay.io/tmichett/asciidocpdf:latest"
-pdf_theme = "-a pdf-theme=/opt/asciidoc/themes/tm-gls-redhat-theme.yml"
-current_directory=$(pwd)
+set -e
 
-podman run -it --name adocpdf --rm -v $current_directory:/tmp/coursebook $container $pdf_theme $1
+container='quay.io/tmichett/asciidocpdf:latest'
+pdf_theme='-a pdf-theme=/opt/asciidoc/themes/tm-gls-redhat-theme.yml'
+current_directory="$(pwd)"
+
+
+echo "Command being run is: podman run --name adocpdf --rm -v $current_directory:/tmp/coursebook:Z $container $pdf_theme $1"
+
+podman run --name adocpdf --rm -v $current_directory:/tmp/coursebook:Z $container $pdf_theme $1
