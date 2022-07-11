@@ -1,0 +1,38 @@
+# Playbook create and written by: Travis Michette
+# Playbook tested on RHCI Foundation 8,8.1,8.2
+# Contact information: tmichett@redhat.com
+---
+- name: Installation of VSCode and Copying Red Hat Extensions
+  hosts: "{{ variable_host | default('Instructor') }}"
+  vars:
+    vscode_files:
+      - redhat.ansible-0.10.0.vsix
+      - redhat.java-1.8.2022062304@linux-x64.vsix
+      - redhat.vscode-yaml-1.8.0.vsix
+  tasks:
+
+    - name: Install VSCode
+      yum:
+        name: code
+        state: present
+      become: true
+
+    - name: VSCode Extensions
+      copy:
+        src: ./files/VSCode/{{ item }}
+        dest: /tmp/
+      loop: "{{ vscode_files }}"
+
+- name: Installation of VSCode Red Hat Extensions
+  hosts: "{{ variable_host | default('Instructor') }}"
+  vars:
+    vscode_files:
+      - redhat.ansible-0.10.0.vsix
+      - redhat.java-1.8.2022062304@linux-x64.vsix
+      - redhat.vscode-yaml-1.8.0.vsix
+  remote_user: "{{ vscode_user | default('kiosk') }}"
+
+  tasks:
+    - name: Install VSCode Extensions
+      shell: code --install-extension /tmp/{{ item }}
+      loop: "{{ vscode_files }}"
