@@ -7,8 +7,9 @@
   vars:
     vscode_files:
       - redhat.ansible-0.10.0.vsix
-      - redhat.java-1.8.2022062304@linux-x64.vsix
+      - asciidoctor.asciidoctor-vscode-3.0.0.vsix
       - redhat.vscode-yaml-1.8.0.vsix
+      - tomoki1207.pdf-1.2.0.vsix
   tasks:
 
     - name: Install VSCode

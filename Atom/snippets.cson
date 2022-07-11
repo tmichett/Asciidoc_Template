@@ -179,7 +179,11 @@ WARNING Text Goes HERE
 """
 
 
-
+  'Image for GLS':
+    'prefix': 'gls_image'
+    'body': """
+image::images/compliance/configuring-ge-a6cb6.png[title="Ansible Automation Platform - Automation Hub",align="center",width="100%"]
+"""
 
 
 
