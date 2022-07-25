@@ -17,7 +17,7 @@ ifdef::env-github[]
 :tip-caption: :bulb:
 :warning-caption: :warning:
 endif::[]
-:imagesdir: ../images/
+:imagesdir: ./images/
 
 
 === <SECTION TITLE>
@@ -62,3 +62,7 @@ Section Info Here
 
 
 ==== <Section_Sub_Intro_Here>
+
+I am an image. Image directory in the chapter files is a symbolic link to the main "images" directory.
+
+image::RH_Discord_Logo.png[title="Example Image Caption", align="center"]
