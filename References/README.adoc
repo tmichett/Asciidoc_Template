@@ -5,3 +5,9 @@
 * *https://snippet-generator.app/* - Generates Snippets for Atom, VSCode, and Sublime Text
 
 
+== AsciiDoc References
+
+* *https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/*
+* *https://powerman.name/doc/asciidoc*
+* *https://gist.github.com/powerman/d56b2675dfed38deb298(
+
