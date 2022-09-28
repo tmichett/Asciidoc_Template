@@ -11,3 +11,18 @@
 * *https://powerman.name/doc/asciidoc*
 * *https://gist.github.com/powerman/d56b2675dfed38deb298(
 
+* *Asciidoctor: store git commit hash in pdf*: https://stackoverflow.com/questions/68924233/asciidoctor-store-git-commit-hash-in-pdf
+
+[source,bash]
+----
+asciidoctor-pdf -acommitHash=$(git rev-parse HEAD) Doku.adoc
+
+ifdef::commitHash[]
+{commitHash}
+endif::[]
+
+:commit: Unknown
+Version: {commit}
+----
+
+* *ASCIIDoctor Macro Substitutions*: https://docs.asciidoctor.org/asciidoc/latest/subs/macros/
