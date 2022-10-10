@@ -66,3 +66,6 @@ Section Info Here
 I am an image. Image directory in the chapter files is a symbolic link to the main "images" directory.
 
 image::RH_Discord_Logo.png[title="Example Image Caption", align="center"]
+
+
+<<<
