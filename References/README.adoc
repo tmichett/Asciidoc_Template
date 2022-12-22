@@ -11,6 +11,13 @@
 * *https://powerman.name/doc/asciidoc*
 * *https://gist.github.com/powerman/d56b2675dfed38deb298(
 
+
+* *EPub*
+** https://docs.asciidoctor.org/epub3-converter/latest/
+
+
+
+
 * *Asciidoctor: store git commit hash in pdf*: https://stackoverflow.com/questions/68924233/asciidoctor-store-git-commit-hash-in-pdf
 
 [source,bash]
