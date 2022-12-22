@@ -11,4 +11,7 @@ current_directory="$(pwd)"
 
 echo "Command being run is: podman run --name adocpdf --rm -v $current_directory:/tmp/coursebook:Z $container $pdf_theme $1"
 
-podman run --name adocpdf --rm -v $current_directory:/tmp/coursebook:Z $container $pdf_theme $1
+#podman run --name adocpdf --rm -v $current_directory:/tmp/coursebook:Z $container $pdf_theme $1
+
+
+podman run --name adocpdf --rm -v $current_directory:/tmp/coursebook:Z  -e "pdf_theme=${pdf_theme}" -e "book_name=${1}" adocpdf-test

@@ -1,0 +1,7 @@
+$ docker run --name adocpdf --rm -v /Users/travis/Documents/Github/TL500.wiki:/tmp/coursebook:Z  -e "pdf_theme=-a pdf-theme=/opt/asciidoc/themes/tm-gls-redhat-theme.yml" -e "book_name=TL500-Instructor-Guide.asciidoc" adocpdf-test
+
+
+
+Need to update the PS1 and Python versions to work with the new container.
+
+Also need to create instructions for creating eBooks now that we have a command that can override.
