@@ -14,12 +14,7 @@ Travis Michette <tmichett@redhat.com>
 :pdf-page-size: LETTER
 :icons: font
 
-// Initial Settings for ePub
-ifdef::ebook-format-epub3[]
-:front-cover-image: image:images/Training_Cover.png[align="top left"]
-:pygments-style: tango
-:source-highlighter: pygments
-endif::[]
+
 
 // Initial Settings for PDFs
 ifdef::backend-pdf[]
@@ -40,6 +35,14 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 :revnumber: 1.0
+
+// Initial Settings for ePub
+ifdef::ebook-format-epub3[]
+:front-cover-image: image:images/Training_Cover.png[align="top left"]
+:pygments-style: tango
+:source-highlighter: pygments
+endif::[]
+
 
 // Introduction Section goes below here
 
