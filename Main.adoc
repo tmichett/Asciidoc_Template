@@ -3,6 +3,7 @@
 :description:  <Description for cover goes here>
 Travis Michette <tmichett@redhat.com>
 :doctype: book
+:title-page-background-image: image:Training_Cover.png[pdfwidth=8.0in,position=top left]
 :customer:  GLS
 :listing-caption: Listing
 :toc:
@@ -13,12 +14,12 @@ Travis Michette <tmichett@redhat.com>
 :chapter-label:
 :pdf-page-size: LETTER
 :icons: font
-
+:imagesdir: images/
 
 
 // Initial Settings for PDFs
 ifdef::backend-pdf[]
-:title-page-background-image: image:images/Training_Cover.png[pdfwidth=8.0in,position=top left]
+:title-page-background-image: image: Training_Cover.png[pdfwidth=8.0in,position=top left]
 :pygments-style: tango
 :source-highlighter: pygments
 endif::[]
@@ -42,6 +43,8 @@ ifdef::ebook-format-epub3[]
 :pygments-style: tango
 :source-highlighter: pygments
 endif::[]
+
+:imagesdir: images/
 
 
 // Introduction Section goes below here
