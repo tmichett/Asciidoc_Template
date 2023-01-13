@@ -14,6 +14,13 @@ Travis Michette <tmichett@redhat.com>
 :pdf-page-size: LETTER
 :icons: font
 :imagesdir: images/
+// The IF Statements don't always work. So must comment out and uncomment based on ePub or PDF
+// Title-Page-Background is for PDF
+// Front-Cover-Image is for ePub
+//:front-cover-image: image:Training_Cover.png[align="top left"]
+:title-page-background-image: image:Training_Cover.png[pdfwidth=8.0in,position=top left]
+
+
 // Initial Settings for PDFs
 ifdef::backend-pdf[]
 :title-page-background-image: image:Training_Cover.png[pdfwidth=8.0in,position=top left]
@@ -35,7 +42,8 @@ endif::[]
 
 // Initial Settings for ePub
 ifdef::ebook-format-epub3[]
-:front-cover-image: image:images/Training_Cover.png[align="top left"]
+:front-cover-image: image:Training_Cover.png[align="top left"]
+:title-page-background-image: image:Training_Cover.png[pdfwidth=8.0in,position=top left]
 :pygments-style: tango
 :source-highlighter: pygments
 endif::[]
