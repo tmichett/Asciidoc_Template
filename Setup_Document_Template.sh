@@ -9,7 +9,7 @@ read CHAPTERS
 
 for ((i=2;i<=$CHAPTERS;i++))
 do
-  cp ChapterTMP.adoc Chapter$i
+  cp ChapterTMP.adoc Chapter$i.adoc
 done
 
 echo "**********************************************"
