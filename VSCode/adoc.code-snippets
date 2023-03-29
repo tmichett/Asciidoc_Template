@@ -1,221 +1,205 @@
 {
-	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
-	// Placeholders with the same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"scope": "javascript,typescript",
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
 
-
-// Snippets for GLS AsciiDoc Template
-// Used for generating XML Files for Flamel and GLS Course Guides
-
-	"Print to console": {
-	 	"scope": "asciidoc",
-	 	"prefix": "gls_important",
-	 	"body": [
-			"[IMPORTANT]"
-			"===="
-			"IMPORTANT Text Goes HERE"
-			"===="
-	 	],
-	 	"description": "GLS Important Box"
-	 }
-
-	 "Print to console": {
-		"scope": "asciidoc",
-		"prefix": "gls_note",
+	// Snippets for Travis's AsciiDoc Template
+	// Used for generating workshops, notes, and webinars
+	
+		"ASCIIDoc Table": {
+			"scope": "asciidoc,adoc",
+			"prefix": "adoc_table",
+			"body": [
+			   ".TABLE NAME",
+			   "[cols='1.0a,1.0a,1.0a', options='header']",
+			   "|===",
+			   "|  Machine name               | IP addresses   | Role",
+			   "| bastion.lab.example.com     | 172.25.250.254 | Router link VMs to central servers",
+				 "|===",
+			],
+			"description": "Table",
+		},
+	
+		"ASCIIDoc Bash Source": {
+			"scope": "asciidoc,adoc",
+			"prefix": "adoc_source",
+			"body": [
+			   "[source,bash]",
+			   "----",
+			   "",
+			   "----",
+			],
+			"description": "Source Block",
+	},
+	
+	"ASCIIDoc YAML Source": {
+		"scope": "asciidoc,adoc",
+		"prefix": "adoc_yml_source",
 		"body": [
-		   "[NOTE]"
-		   "===="
-		   "NOTE Text Goes HERE"
-		   "===="
+		   "[source,yml]",
+		   "----",
+		   "",
+		   "----",
 		],
-		"description": "GLS Note Box"
-	}
-
-	"Print to console": {
-		"scope": "asciidoc",
-		"prefix": "gls_warn",
-		"body": [
-		   "[WARNING]"
-		   "===="
-		   "Warning Text Goes HERE"
-		   "===="
-		],
-		"description": "GLS Warning Box"
-	}
-
-
-	"Print to console": {
-		"scope": "asciidoc",
-		"prefix": "gls_ref",
-		"body": [
-		   "[role="References"]"
-		   "[NOTE]"
-		   "===="
-		   "GLS Reference Text Goes HERE"
-		   "===="
-		],
-		"description": "GLS Reference Box"
-	}
-
-
-	"Print to console": {
-		"scope": "asciidoc",
-		"prefix": "gls_table",
-		"body": [
-		   ".TABLE NAME"
-		   "[cols="1.0a,1.0a,1.0a", options="header"]"
-		   "|==="
-		   "|  Machine name               | IP addresses   | Role"
-		   "| bastion.lab.example.com     | 172.25.250.254 | Router link VMs to central servers"
-			 "|==="
-		],
-		"description": "GLS Table"
-	}
-
-	"Print to console": {
-		"scope": "asciidoc",
-		"prefix": "gls_source",
-		"body": [
-		   "[subs=+quotes]"
-		   "----"
-			 "    "
-		   "----"
-		],
-		"description": "Source Block for GLS"
-	}
-
-
-
-
-
-// Snippets for Travis's AsciiDoc Template
-// Used for generating workshops, notes, and webinars
-
-
-	"Print to console": {
-		"scope": "asciidoc",
+		"description": "YAML Source Block",
+	},
+	
+	"Note Admonition Box": {
+		"scope": "asciidoc, adoc",
 		"prefix": "note",
 		"body": [
-		   "[NOTE]"
-		   "======"
-		   "Note Text Goes HERE"
-		   "======"
+		   "[NOTE]",
+		   "======",
+		   "Note Text Goes HERE",
+		   "======",
 		],
 		"description": "Note Box"
-	}
-
-
-	"Print to console": {
-		"scope": "asciidoc",
+	},
+	
+	
+	"Warning Admonition Box": {
+		"scope": "asciidoc, adoc",
 		"prefix": "warning",
 		"body": [
-		   "[WARNING]"
-		   "======"
-		   "Warning Text Goes HERE"
-		   "======"
+		   "[WARNING]",
+		   "======",
+		   "Warning Text Goes HERE",
+		   "======",
 		],
 		"description": "Warning Box"
-	}
-
-	"Print to console": {
-		"scope": "asciidoc",
+	},
+	
+	
+	"Tip Admonition Box": {
+		"scope": "asciidoc, adoc",
 		"prefix": "tip",
 		"body": [
-		   "[TIP]"
-		   "======"
-		   "TIP Text Goes HERE"
-		   "======"
+		   "[TIP]",
+		   "======",
+		   "TIP Text Goes HERE",
+		   "======",
 		],
 		"description": "Tip Box"
-	}
-
-
-	"Print to console": {
-		"scope": "asciidoc",
+	},
+	
+	
+	"Caution Admonition Box": {
+		"scope": "asciidoc, adoc",
 		"prefix": "caution",
 		"body": [
-		   "[CAUTION]"
-		   "======"
-		   "Caution Text Goes HERE"
-		   "======"
+		   "[CAUTION]",
+		   "======",
+		   "Caution Text Goes HERE",
+		   "======",
 		],
 		"description": "Caution Box"
-	}
-
-	"Print to console": {
-		"scope": "asciidoc",
+	},
+	
+	"Important Admonition Box": {
+		"scope": "asciidoc, adoc",
 		"prefix": "important",
 		"body": [
-		   "[IMPORTANT]"
-		   "======"
-		   "IMPORTANT Text Goes HERE"
-		   "======"
+		   "[IMPORTANT]",
+		   "======",
+		   "IMPORTANT Text Goes HERE",
+		   "======",
 		],
 		"description": "Important Box"
-	}
-
-
-	"Print to console": {
+	},
+	
+	
+	"Image Template": {
 		"scope": "asciidoc",
 		"prefix": "image",
 		"body": [
-		   "image::AnsibleTower-Classroom-Architecture.png[title="DO447 Classroom Layout", align="center"]"
+		   "image::AnsibleTower-Classroom-Architecture.png[title='DO447 Classroom Layout', align='center']"
 		],
 		"description": "Important Templage"
-	}
-
-
-	"Print to console": {
-		"scope": "asciidoc",
-		"prefix": "yml_source",
+	},
+	
+	
+	
+	// Snippets for GLS AsciiDoc Template
+	// Used for generating XML Files for Flamel and GLS Course Guides
+	
+	"GLS Docbook Important": {
+		"scope": "asciidoc, adoc_source",
+		"prefix": "gls_important",
 		"body": [
-		   "[source,yml]"
-		   "----"
-			 "    "
-		   "----"
+		   "[IMPORTANT]",
+		   "====",
+		   "IMPORTANT Text Goes HERE",
+		   "====",
 		],
-		"description": "YAML Source Block"
+		"description": "GLS Important Box"
+	},
+	
+	"GLS Docbook Note": {
+	   "scope": "asciidoc, adoc",
+	   "prefix": "gls_note",
+	   "body": [
+		  "[NOTE]",
+		  "====",
+		  "NOTE Text Goes HERE",
+		  "====",
+	   ],
+	   "description": "GLS Note Box"
+	},
+	
+	"GLS Dockbook Warning": {
+	   "scope": "asciidoc, adoc",
+	   "prefix": "gls_warn",
+	   "body": [
+		  "[WARNING]"
+		  "===="
+		  "Warning Text Goes HERE"
+		  "====",
+	   ],
+	   "description": "GLS Warning Box"
+	},
+	
+	
+	"GLS Docbook References": {
+	   "scope": "asciidoc, adoc",
+	   "prefix": "gls_ref",
+	   "body": [
+		  "[role="References"]",
+		  "[NOTE]",
+		  "====",
+		  "GLS Reference Text Goes HERE",
+		  "====",
+	   ],
+	   "description": "GLS Reference Box"
+	},
+	
+	
+	"GLS Dockbook Table": {
+	   "scope": "asciidoc, adoc",
+	   "prefix": "gls_table",
+	   "body": [
+		  ".TABLE NAME",
+		  "[cols='1.0a,1.0a,1.0a', options='header']",
+		  "|===",
+		  "|  Machine name               | IP addresses   | Role",
+		  "| bastion.lab.example.com     | 172.25.250.254 | Router link VMs to central servers",
+			"|==="
+	   ],
+	   "description": "GLS Table"
+	},
+	
+	"GLS Docbook Source ": {
+	   "scope": "asciidoc, adoc",
+	   "prefix": "gls_source",
+	   "body": [
+		  "[subs=+quotes]",
+		  "----",
+		  "",
+		  "----",
+	   ],
+	   "description": "Source Block for GLS"
 	}
-
-
-	"Print to console": {
-		"scope": "asciidoc",
-		"prefix": "source",
-		"body": [
-		   "[source,bash]"
-		   "----"
-			 "    "
-		   "----"
-		],
-		"description": "Source Block"
+	
 	}
-
-	"Print to console": {
-		"scope": "asciidoc",
-		"prefix": "table",
-		"body": [
-		   ".TABLE NAME"
-		   "[cols="1.0a,1.0a,1.0a", options="header"]"
-		   "|==="
-		   "|  Machine name               | IP addresses   | Role"
-		   "| bastion.lab.example.com     | 172.25.250.254 | Router link VMs to central servers"
-			 "|==="
-		],
-		"description": "Table"
-	}
-
-
-}
+	
+	
+	
+	
+	
+	
