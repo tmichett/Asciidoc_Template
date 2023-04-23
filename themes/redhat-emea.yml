@@ -1,0 +1,128 @@
+extends: default
+base:
+  font_size: 9
+
+page:
+  background_color: FFFFFF
+  layout: portrait
+  initial_zoom: FitH
+  margin: [0.5in, 0.67in, 0.67in, 0.67in]
+  # margin_inner and margin_outer keys are used for recto/verso print margins when media=prepress
+  margin_inner: 0.75in
+  margin_outer: 0.59in
+  size: A4
+  numbering:
+    start-at: title
+
+role:
+  love:
+    font-color: E0245E
+  wild:
+    font-color: 222222
+    text-transform: uppercase
+    font-style: italic
+    background-color: BCD637
+    border-offset: 1.5
+  exercise:
+    background-color: D9F0F9
+  exercise-header:
+    font-color: 1A97D5
+example:
+  border_color: $base_border_color
+  border_radius: $base_border_radius
+  border_width: 0.75
+  # background_color: $page_background_color
+  #background_color: FFB86C
+  #background_color: FDEBD0
+  background_color: D9F0F9
+  #FDEBD0
+  # FIXME reenable padding bottom once margin collapsing is implemented
+  padding: [$vertical_rhythm, $horizontal_rhythm, 0, $horizontal_rhythm]
+
+title_page:
+  align: right
+  background_image: image:../images/titlepage-background-logo.svg[]
+  logo:
+    image: image:../images/titlepage-logo-rhtc.png[scaledwidth="65%"]
+    top: 45%
+    right: 0%
+  title:
+    top: 55%
+    font_size: $heading_h1_font_size
+    font_color: 333333
+    line_height: 0.9
+  subtitle:
+    font_size: $heading_h3_font_size
+    font_style: bold_italic
+    line_height: 1
+  authors:
+    margin_top: $base_font_size * 1.25
+    font_size: $base_font_size_large
+    font_color: 181818
+  revision:
+    margin_top: $base_font_size * 1.25
+
+image:
+  caption:
+    align: center
+    font_style: italic
+    font_size: 10
+    font_color: ff0000
+
+table:
+  caption:
+    align: left
+    font_style: italic
+    font_size: 10
+    font_color: ff0000
+
+code:
+  caption:
+    align: left
+    font_style: bold
+    font_size: 10
+  font_size: 8
+
+caption:
+  align: left
+  font_style: bold
+  font_size: 12
+  font_color: ff0000
+
+header:
+  font_color: 000000 
+  height: 0.4in
+  border_color: ff0000 
+  recto:
+    right:
+      content: "{section-title}"
+    left: 
+      content: image:../images/header-logo-redhat.png[pdfwidth=0.8in]
+    center:
+      content: 
+  verso:
+    left:
+      content: "{chapter-title}"
+    center:
+      content: $header_recto_center_content
+    right:
+      content: $header_recto_left_content
+
+footer:
+  height: 0.45in
+  font_color: 000000 
+  border_color: ff0000 
+  recto:
+    left:
+      content: '{page-number}'
+    center:
+      content: '{document-title}'
+    right:
+      content: 'Version: {revnumber}'
+  verso:
+    right:
+      content: $footer_recto_left_content
+    center:
+      content: $footer_recto_center_content
+    left:
+      content: $footer_recto_right_content
