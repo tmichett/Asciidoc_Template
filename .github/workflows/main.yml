@@ -3,9 +3,15 @@ name: Build PDF
 
 
 # Controls when the workflow will run
-on: 
+# Workflow will run on a push event.
+# Workflow won't be triggered to re-run based on the Gitauth token push
+#on: 
   # This is a reusable workflow
-  workflow_dispatch:
+#  workflow_dispatch:
+on:
+  push:
+    branches:
+      - main
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
