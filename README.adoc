@@ -39,3 +39,13 @@ asciidoctor-pdf  -a pdf-theme=themes/tm-gls-redhat-theme.yml Main.adoc
 ======
 Ideally when using this repository, the newly created document repository only has the top layer "/" directory, the *Chapters* directory, the *themes* and *fonts* directory, and finally the *images* directory. All other directories may be discarded and removed once the project has been cloned/forked/etc.
 ======
+
+
+.Book Levels
+[source,bash]
+----
+= Book Title
+== Chapter Title
+=== Section Title
+==== Sub-Section Title
+----
